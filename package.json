@@ -7,25 +7,34 @@
   "dependencies": {
     "@casl/ability": "^2.4.2",
     "@casl/mongoose": "^2.1.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.4",
     "debug": "^3.1.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.9",
     "mongoose-paginate": "^5.0.3"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.1",
+    "@types/cors": "^2.8.4",
     "@types/debug": "0.0.30",
     "@types/dotenv": "^4.0.3",
     "@types/express": "^4.16.0",
+    "@types/helmet": "0.0.38",
+    "@types/jsonwebtoken": "^7.2.8",
     "@types/mongoose": "^5.2.6",
     "@types/mongoose-paginate": "^5.0.6",
+    "cross-env": "^5.2.0",
     "ts-node-dev": "^1.0.0-pre.26",
     "typescript": "^3.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc",
-    "watch": "export DEBUG=App && ts-node-dev --notify=false --respawn --transpileOnly ./src/index.ts"
+    "watch": "cross-env-shell DEBUG=App ts-node-dev --require dotenv/config --notify=false --respawn --transpileOnly ./src/index.ts"
   },
   "repository": {
     "type": "git",
